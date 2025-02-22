@@ -27,13 +27,13 @@
   overflow: auto;
   backdrop-filter: opacity(1);
   -webkit-backdrop-filter: opacity(1);
-  background: rgba(47,80,255,0.44);
+  /*background: rgba(47,80,255,0.44);*/
   color: #ffffff;
 }
 
 @media (min-width: 992px) {
   #header {
-    background-color: #1420ce;
+    /*background-color: #1420ce;*/
     min-height: 100%;
     height: 100vh!important;
     overflow-y: hidden;
@@ -69,7 +69,7 @@
 }
 
 #m-navbar-menu .navbar-nav .nav-item.active .nav-link {
-  color: #584896;
+  /*color: #584896;*/
 }
 
 #m-navbar-menu .navbar-nav .nav-item .nav-link {
