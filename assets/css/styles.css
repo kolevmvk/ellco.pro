@@ -18,7 +18,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('assets/img/rain_on_glass1.jpg') no-repeat center center fixed;
+  background: url('..assets/img/rain_on_glass1.jpg') no-repeat center center fixed;
   background-size: cover;
   filter: hue-rotate(200deg) saturate(150%) brightness(80%) blur(1px);
   z-index: -1;
