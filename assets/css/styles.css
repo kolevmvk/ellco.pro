@@ -19,6 +19,7 @@ body {
   width: 100vw;
   height: 100vh;
   background: url('../img/rain_on_glass1.jpg') no-repeat center center fixed;
+  background-color: rgb(27, 27, 154);
   background-size: cover;
   filter: hue-rotate(200deg) saturate(150%) brightness(80%) blur(1px);
   z-index: -1;
