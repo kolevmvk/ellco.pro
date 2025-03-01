@@ -188,42 +188,57 @@ nav {
   .sqr p {
     display: none;
   }
+  #mreza-1 {
+    margin: 3px;
+  }
 }
 
 @media (min-width: 300px) {
   #mreza-1 {
     height: 353.612px;
-  }
-
-  html {
-    width: 100%;
+    margin: 5px;
   }
 
   .h5 {
     font-size: 4rem;
-    color: #d5c422;
-    padding: 1px 10px !important;
-    border: 2px solid gold;
+    font-style: italic;
+    padding: 0 10px !important;
+    border: 3px solid gold;
     border-radius: 20px;
-    margin: 0 !important;
+    margin: 0 10px!important;
     font-weight: bold;
-    background: rgba(255, 255, 255, 0.1);
-    /* Polu-transparentna bela */
-    backdrop-filter: blur(5px);
-    /* Blur efekat */
-    -webkit-backdrop-filter: blur(5px);
-    /* Safari podrška */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
-    /* Blagi sjaj */
     font-family: 'Montserrat', sans-serif;
     line-height: 1.4;
-
-  }
-
-  .h5:hover {
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+    
+    /* Zlatni gradijent za tekst */
+    background: linear-gradient(180deg, #FFF7A3, #FFD700, #FFC107, #DAA520, #8B6508, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Border (ivica) oko slova */
+    -webkit-text-stroke: 1.5px #7A5900;  /* Za WebKit browsere */
+    
+    /* Poboljšana senka za efekat ivice na svim browserima */
+    text-shadow: 
+        1px 1px 3px rgba(255, 215, 0, 0.9),
+        2px 2px 5px rgba(204, 153, 0, 0.8),
+        3px 3px 8px rgba(139, 101, 8, 0.7),
+        0px 0px 10px rgba(255, 215, 0, 0.5),
+        
+    /* Poboljšana senka za okvir */
+    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.5);
+    
     transition: all 0.3s ease-in-out;
-  }
+}
+
+/* Hover efekat - svetliji odsjaj */
+.h5:hover {
+    box-shadow: 0px 0px 30px rgba(255, 255, 200, 0.8);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+
 
   .square {
     background: rgba(255, 255, 255, 0.1);
@@ -276,6 +291,7 @@ nav {
   color: gold !important;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.64);
   border: 2px solid gold;
+  border-radius: 15px !important;
   background-color: rgba(0, 0, 255, 0.318) !important;
   margin-left: 10px;
   white-space: nowrap;
@@ -286,6 +302,7 @@ nav {
   color: gold !important;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.64);
   border: 2px solid gold;
+  border-radius: 15px !important;
   background-color: rgba(0, 255, 60, 0.318) !important;
   margin-left: 10px;
   white-space: nowrap;
@@ -365,10 +382,7 @@ nav {
     height: 100vh;
   }
   #mreza-1 {
-    margin: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    margin-left: 0px;
+    margin: 5px;
     height: 100%;
     aspect-ratio: 1;
   }
