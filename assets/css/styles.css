@@ -18,13 +18,28 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('../img/rain_on_glass1.jpg') no-repeat center center fixed;
-  background-color: rgb(27, 27, 154);
+  background: radial-gradient(circle at top, rgba(10, 10, 10, 1), rgba(20, 20, 20, 0.95)),
+    url('../img/tech-mesh.jpg') no-repeat center center fixed;
+  /* Zameniti sa pravom slikom */
   background-size: cover;
-  filter: hue-rotate(200deg) saturate(150%) brightness(80%) blur(1px);
+  filter: saturate(140%) brightness(90%) blur(2px);
   z-index: -1;
-
 }
+
+/* Dodaj suptilan neon glow efekt */
+.bg-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, rgba(0, 102, 255, 0.2), transparent),
+    radial-gradient(circle at 70% 70%, rgba(255, 0, 255, 0.15), transparent);
+  z-index: -2;
+  opacity: 0.7;
+}
+
 
 
 canvas {
@@ -79,6 +94,7 @@ canvas {
   padding: 0 !important;
 }
 
+
 nav {
   padding-bottom: 5px !important;
   margin-bottom: auto;
@@ -87,36 +103,6 @@ nav {
 
 .navbar-toggler {
   color: white;
-}
-
-.sqr {
-  background: rgba(27, 7, 242, 0.026);
-  border: 1px solid rgb(53, 86, 255);
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  border-radius: 20px;
-  box-shadow: 3px 3px 8px rgb(8, 1, 1);
-  text-align: center;
-  backdrop-filter: opacity(1) blur(3px);
-
-}
-
-i {
-  width: 80%;
-  height: 80%;
-  color: white;
-}
-
-.sqr img {
-  width: 100%;
-  padding: 3px;
-  border-radius: 20px;
-}
-
-.text-center {
-  padding: 0;
 }
 
 #m-navbar-menu .navbar-nav .nav-item .nav-link {
@@ -130,12 +116,46 @@ i {
   margin-bottom: 0.5rem;
   border-radius: 10px;
 }
+
 #m-navbar-menu .navbar-nav .nav-item .nav-link:hover {
-  border:2px solid gold!important;
-  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3); /* Blagi sjaj */
+  border: 2px solid gold !important;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+  /* Blagi sjaj */
 }
 
 
+.sqr {
+  background: rgba(27, 7, 242, 0.026);
+  border: 1px solid rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 8px rgb(8, 1, 1);
+  text-align: center;
+  backdrop-filter: opacity(1) blur(3px);
+  gap: 2px;
+}
+
+.sqr::before {
+  background: radial-gradient(circle at 30% 30%, rgba(255, 215, 0, 0.3), transparent),
+    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.15), transparent);
+}
+
+.sqr:hover {
+  box-shadow: inset 0px 0px 50px rgba(255, 215, 0, 0.7),
+    inset 0px 0px 80px rgba(255, 255, 255, 0.3);
+  border-color: gold;
+}
+
+.mrch {
+
+  font-size: 25px;
+  border-width: 0px;
+  border-style: none;
+  color: rgb(255, 255, 255) !important;
+}
 
 #m-navbar-menu {
   width: 50% !important;
@@ -147,40 +167,28 @@ i {
   margin: 20px;
 }
 
-.social-icons i:hover,
-.social-icons i:active {
-  color: #ffffff;
-  background-color: #decb11;
-  box-shadow: 0px 4px 15px rgba(254, 254, 255, 0.6), 0px 8px 20px rgba(0, 0, 0, 0.7);
-  transform: scale(1.1);
-  border-color: #ffffff;
-}
+
 
 .h5 {
   font-family: 'Pacifico', cursive;
   /*font-style: oblique;*/
 }
 
-#m-navbar-menu {
-  color: #fd0404;
-}
 
 .navbar-toggler-icon {
   border: 2px solid #000000;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8), inset 0px 2px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 4px 10px rgba(213, 204, 204, 0.8), inset 0px 2px 5px rgba(0, 0, 0, 0.6);
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #f9f9f995;
 }
 
-.sqr:hover {
-  box-shadow: inset 3px 2px 2px 0px rgb(1, 1, 1);
-  background: rgba(19, 19, 225, 0.404);
-  border-color: gold;
+@media (max-width: 300px) {
+  .sqr p {
+    display: none;
+  }
 }
-
-
 
 @media (min-width: 300px) {
   #mreza-1 {
@@ -199,14 +207,19 @@ i {
     border-radius: 20px;
     margin: 0 !important;
     font-weight: bold;
-    background: rgba(255, 255, 255, 0.1); /* Polu-transparentna bela */
-    backdrop-filter: blur(5px); /* Blur efekat */
-    -webkit-backdrop-filter: blur(5px); /* Safari podrška */
-    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3); /* Blagi sjaj */
+    background: rgba(255, 255, 255, 0.1);
+    /* Polu-transparentna bela */
+    backdrop-filter: blur(5px);
+    /* Blur efekat */
+    -webkit-backdrop-filter: blur(5px);
+    /* Safari podrška */
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+    /* Blagi sjaj */
     font-family: 'Montserrat', sans-serif;
     line-height: 1.4;
-   
+
   }
+
   .h5:hover {
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
     transition: all 0.3s ease-in-out;
@@ -233,19 +246,12 @@ i {
   }
 
 
-  .sqr svg {
-    font-size: 40px;
-    color: rgb(255, 255, 255);
-    padding-bottom: 5px;
-  }
-
   .mrch {
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 34px;
+
+    font-size: 30px;
     border-width: 0px;
     border-style: none;
+    color: rgb(255, 255, 255) !important;
   }
 
   .h6 {
@@ -270,11 +276,29 @@ i {
   color: gold !important;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.64);
   border: 2px solid gold;
-  background-color: rgba(0, 0, 255, 0.318)!important;
+  background-color: rgba(0, 0, 255, 0.318) !important;
+  margin-left: 10px;
+  white-space: nowrap;
 
 }
 
+.btn-success {
+  color: gold !important;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.64);
+  border: 2px solid gold;
+  background-color: rgba(0, 255, 60, 0.318) !important;
+  margin-left: 10px;
+  white-space: nowrap;
+
+}
+
+
 .btn-primary:hover {
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.9);
+  transform: scale(1.05)
+}
+
+.btn-success:hover {
   box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.9);
   transform: scale(1.05)
 }
@@ -289,6 +313,19 @@ i {
     text-align: center;
     overflow: hidden;
   }
+
+  .btn-primary {
+    margin-top: 15px;
+    padding: 0;
+    padding: 0.5rem 1rem;
+
+  }
+
+  .btn-success {
+    margin-top: 15px;
+    padding: 0;
+    padding: 0.5rem 1rem;
+  }
 }
 
 
@@ -297,18 +334,28 @@ i {
     height: auto;
     width: 100%;
   }
+
+  .square {
+    gap: 5px
+  }
 }
 
 @media (min-width: 768px) {
   .sqr {
     overflow: hidden;
     overflow-x: visible;
-    padding: 0px 0px 0px;
+    padding: 0;
     border: 3px solid rgb(255, 255, 255);
     margin: 0px;
+    gap: 5px
+  }
+
+  .mrch {
+
+    font-size: 35px;
+    padding: auto;
   }
 }
-
 
 
 @media (min-width: 992px) {
@@ -321,9 +368,8 @@ i {
     aspect-ratio: 1;
   }
 
-  #main {
-
-    /*width: 100vw;*/
+  .square {
+    gap: 5px
   }
 
   #wind {
