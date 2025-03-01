@@ -18,8 +18,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle at top, rgba(10, 10, 10, 1), rgba(20, 20, 20, 0.95)),
-    url('../img/tech-mesh.jpg') no-repeat center center fixed;
+  background: radial-gradient(circle at top, rgb(11, 34, 135), rgba(151, 161, 46, 0.95)), no-repeat center center fixed;
   /* Zameniti sa pravom slikom */
   background-size: cover;
   filter: saturate(140%) brightness(90%) blur(2px);
@@ -104,13 +103,13 @@ nav {
 .navbar-toggler {
   color: white;
 }
-
+#m-navbar-menu {
+  margin-top: 10px;
+}
 #m-navbar-menu .navbar-nav .nav-item .nav-link {
   color: #d5c422 !important;
-  font-size: x-large;
+  font-size: large;
   padding: 0;
-  /*border: 1px solid black;*/
-  /*width: 30%;*/
   align-items: center;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -120,6 +119,7 @@ nav {
 #m-navbar-menu .navbar-nav .nav-item .nav-link:hover {
   border: 2px solid gold !important;
   box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+  margin: 0;
   /* Blagi sjaj */
 }
 
@@ -359,6 +359,11 @@ nav {
 
 
 @media (min-width: 992px) {
+
+  body {
+    display: flex;
+    height: 100vh;
+  }
   #mreza-1 {
     margin: 0px;
     margin-right: 0px;
@@ -383,17 +388,6 @@ nav {
     max-width: 100% !important;
   }
 
-  body {
-    display: flex;
-    height: 100vh;
-  }
+ 
 
-  section {
-    width: 100%;
-    background: transparent;
-    opacity: 1;
-    backdrop-filter: opacity(1);
-    -webkit-backdrop-filter: opacity(1);
-    transform: perspective(0px);
-  }
 }
