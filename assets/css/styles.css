@@ -68,7 +68,7 @@ canvas {
   justify-content: center;
   align-items: center;
   aspect-ratio: 1/1;
-  background: rgba(250, 250, 250, 0.42);
+  /*background: rgba(250, 250, 250, 0.42);*/
   z-index: 10;
   text-align: center;
   overflow: hidden;
@@ -86,13 +86,17 @@ canvas {
 }
 
 .social-icons a i {
-  margin: 0 5px;
+  margin: 0 0px;
 }
 
 .social-icons a {
   padding: 0 !important;
 }
 
+.social-icons a i:hover {
+  background-color: gold;
+  color: #000000;
+}
 
 nav {
   padding-bottom: 5px !important;
@@ -104,9 +108,11 @@ nav {
 .navbar-toggler {
   color: white;
 }
+
 #m-navbar-menu {
   margin-top: 10px;
 }
+
 #m-navbar-menu .navbar-nav .nav-item .nav-link {
   color: #d5c422 !important;
   font-size: large;
@@ -189,6 +195,7 @@ nav {
   .sqr p {
     display: none;
   }
+
   #mreza-1 {
     margin: 3px;
   }
@@ -206,38 +213,39 @@ nav {
     padding: 0 10px !important;
     border: 3px solid gold;
     border-radius: 20px;
-    margin: 0 10px!important;
+    margin: 0 10px !important;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.4;
-    
+
     /* Zlatni gradijent za tekst */
     background: linear-gradient(180deg, #FFF7A3, #FFD700, #FFC107, #DAA520, #8B6508, #FFD700);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    
-    /* Border (ivica) oko slova */
-    -webkit-text-stroke: 1.5px #7A5900;  /* Za WebKit browsere */
-    
-    /* Poboljšana senka za efekat ivice na svim browserima */
-    text-shadow: 
-        1px 1px 3px rgba(255, 215, 0, 0.9),
-        2px 2px 5px rgba(204, 153, 0, 0.8),
-        3px 3px 8px rgba(139, 101, 8, 0.7),
-        0px 0px 10px rgba(255, 215, 0, 0.5),
-        
-    /* Poboljšana senka za okvir */
-    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.5);
-    
-    transition: all 0.3s ease-in-out;
-}
 
-/* Hover efekat - svetliji odsjaj */
-.h5:hover {
+    /* Border (ivica) oko slova */
+    -webkit-text-stroke: 1.5px #7A5900;
+    /* Za WebKit browsere */
+
+    /* Poboljšana senka za efekat ivice na svim browserima */
+    text-shadow:
+      1px 1px 3px rgba(255, 215, 0, 0.9),
+      2px 2px 5px rgba(204, 153, 0, 0.8),
+      3px 3px 8px rgba(139, 101, 8, 0.7),
+      0px 0px 10px rgba(255, 215, 0, 0.5),
+
+      /* Poboljšana senka za okvir */
+      box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.5);
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  /* Hover efekat - svetliji odsjaj */
+  .h5:hover {
     box-shadow: 0px 0px 30px rgba(255, 255, 200, 0.8);
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
-}
+  }
 
 
 
@@ -382,6 +390,7 @@ nav {
     display: flex;
     height: 100vh;
   }
+
   #mreza-1 {
     margin: 5px;
     height: 100%;
@@ -403,6 +412,6 @@ nav {
     max-width: 100% !important;
   }
 
- 
+
 
 }
