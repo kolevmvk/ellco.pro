@@ -1,0 +1,55 @@
+# Declared status; not a verified release. Source: repository README/docs and Git HEAD.
+# 0/0 module progress means unquantified; empty risk/debt lists do not prove absence.
+# Blocker since dates are the source-document commit dates, not inferred incident dates.
+schema_version: 1
+project:
+  id: ellco-pro
+  name: ellco.pro
+  repo: kolevmvk/ellco.pro
+  kind: web
+  stage: production
+updated:
+  at: "2026-09-24T10:50:50Z"
+  by: codex
+  at_commit: "e2b359e3885112a6bbd14c84aed6ff99878d9e7b"
+summary: Static marketing website tracked as index.html and assets. Recent commits include Safari/iPhone
+  and icon fixes. The parent ellco workspace README identifies this as the live marketing site; the working
+  tree contains separate uncommitted changes excluded from this snapshot.
+modules:
+- id: M1
+  name: Static marketing page
+  path: index.html
+  status: in_progress
+  progress:
+    done: 0
+    total: 0
+    basis: 'Not quantified: no acceptance-item count has been established for this snapshot; 0/0 is unknown
+      progress, not zero-percent completion.'
+  depends_on: []
+  docs: []
+risks: []
+blockers: []
+technical_debt: []
+pending_verification:
+- id: V1
+  claim: The documented repository checks and primary workflows succeed on this checkout.
+  module: null
+  how: Serve the committed static site locally and check navigation, links and mobile Safari behavior
+    in a browser.
+  status: not_run
+  evidence: null
+next_actions: []
+release:
+  target_version: null
+  checklist:
+  - id: RC1
+    title: 'Release acceptance: build, integrations and user/device flows checked for the intended release.'
+    status: not_run
+    evidence: null
+agents:
+  last_session:
+    agent: codex
+    at: "2026-09-24T10:50:50Z"
+    summary: Created a repository-grounded Control Center status snapshot; application/release checks
+      not run.
+    commits: 1
